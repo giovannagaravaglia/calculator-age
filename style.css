@@ -90,7 +90,7 @@ input::placeholder{
     width: 9rem;
     color: var(--Light-red);
     font-style: italic;
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
 .date-month, .date-day, .date-year{
