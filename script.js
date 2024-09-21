@@ -86,6 +86,32 @@ form.addEventListener('submit', function (e){
 
     }
 
+    if (dayContent == 31){
+
+        let month31 = [1,3,5,7,8,10,12];
+        let month31Checked = false;
+
+        for (let i =0; i < 6; i++){
+            if(monthContent == month31[i]){
+                month31Checked = true;
+                break
+            }
+        }
+
+        if (!month31Checked){
+            AllSuccess = false;
+            messageInvalidDate();
+            dayInput.value =''
+            monthInput.value =''
+        }
+        
+    }
+
+    if (!leapYear(yearContent)){
+        AllSuccess = false;
+        messageInvalidDate();
+    }
+
     if (AllSuccess){
         ageYear = yearToday - yearContent;
         ageMonth = monthToday - monthContent;
