@@ -107,7 +107,7 @@ form.addEventListener('submit', function (e){
         
     }
 
-    if (!leapYear(yearContent)){
+     if ((dayContent == 29 && monthContent ==2) && (!leapYear(yearContent))){
         AllSuccess = false;
         messageInvalidDate();
     }
